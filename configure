@@ -120,9 +120,9 @@ class Configure
     @vendor_zlib = false
 
     # Essential settings (modify these for creating releases)
-    @libversion = "2.0"
+    @libversion = "10.0"
     @patch_version = "0"
-    @release = "rc1"
+    @release = "alpha1"
     @release_date = "yyyy-mm-dd"
     @config_version = 171
   end
