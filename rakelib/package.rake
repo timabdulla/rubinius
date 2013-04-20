@@ -106,6 +106,13 @@ namespace :package do
     pkg.build
   end
 
+  namespace :release do
+    desc "Build a general Unix/Linux final release"
+    task :final do
+      sh "rake package:binary_builder RBX_BINARY_LANGUAGE=18,19"
+    end
+  end
+
   namespace :nightly do
     desc "Build a general Unix/Linux nightly binary package for 1.8"
     task :"18" do

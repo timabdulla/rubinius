@@ -122,8 +122,8 @@ class Configure
     # Essential settings (modify these for creating releases)
     @libversion = "10.0"
     @patch_version = "0"
-    @release = "alpha1"
-    @release_date = "yyyy-mm-dd"
+    @release = ""
+    @release_date = DateTime.now.strftime("%F")
     @config_version = 171
   end
 

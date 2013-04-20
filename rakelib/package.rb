@@ -111,10 +111,12 @@ class RubiniusPackager
   # name of the final package file minus #archive
   def package
     default = "rubinius-#{rbx_version}"
-    if release[0, 2] == "rc"
-      default += "-#{release}"
-    else
-      default += "-#{release}#{date_stamp}"
+    if release
+      if release[0, 2] == "rc"
+        default += "-#{release}"
+      else
+        default += "-#{release}#{date_stamp}"
+      end
     end
     default += "-d#{ruby_version}" if single_version?
     @package || default
