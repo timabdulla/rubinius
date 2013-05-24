@@ -225,8 +225,8 @@ namespace atomic {
   }
 
   template <typename T> inline void write(T *ptr, T val) {
-    memory_barrier();
     *ptr = val;
+    memory_barrier();
   }
 
 }
